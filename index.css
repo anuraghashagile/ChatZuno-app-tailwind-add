@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode Defaults - Pure White & Blue */
+  --background: #ffffff;
+  --surface: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent: #2563eb; /* Blue 600 */
+  --accent-hover: #1d4ed8;
+  --user-bubble: #2563eb;
+  --user-text: #ffffff;
+  --stranger-bubble: #f1f5f9;
+  --stranger-text: #334155;
+  --input-bg: #f8fafc;
+  --border: #e2e8f0;
+}
+
+.dark {
+  /* Dark Mode Defaults - Deep Cosmic */
+  --background: #0b001a; 
+  --surface: #150529;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #8b5cf6; /* Violet Accent */
+  --accent-hover: #7c3aed;
+  --user-bubble: #8b5cf6;
+  --user-text: #ffffff;
+  --stranger-bubble: #27272a;
+  --stranger-text: #e4e4e7;
+  --input-bg: #1e1035;
+  --border: #2e1065;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1), color 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.darkveil-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.icon-shadow {
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+}
+
+/* Custom Input Reset */
+input, select {
+  outline: none;
+}
